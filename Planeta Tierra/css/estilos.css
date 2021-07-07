@@ -1,0 +1,231 @@
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+
+body{
+background-image: url(../img/estrellas.gif);
+overflow: hidden;
+}
+
+/*----------------ESTILOS DEL SOL-----------------------------------*/
+
+.cont-luna{
+
+    width: 100px;
+    height:100px;
+    margin-left:1000px;
+    margin-top:270px;
+    position: absolute;
+    overflow: hidden;
+    animation-name: lunaTraslacion;
+    animation-iteration-count: infinite;
+    animation-duration:10s;
+    animation-timing-function: linear;
+
+}
+
+.luna{
+background-image: url("../img/luna.jpg");
+background-size: cover;
+width:65px;
+height:65px;
+margin-left:20px;
+margin-top: 15px;
+border-radius: 50%;
+
+box-shadow: -10px -15px 25px  rgb(0, 0, 0) inset,
+            -16px -15px 20px rgb(0, 0, 0) inset,
+            -17px -15px 15px rgb(0, 0, 0) inset;
+}
+
+@keyframes lunaTraslacion{
+
+    0%{margin-left:1000px;}
+
+    25%{margin-left: 600px;}
+    50%{margin-left: 300px;}
+    80%{z-index: 1;}
+    75%{margin-left: 600px;}
+    100%{margin-left: 1000px;}
+}
+
+
+
+
+
+/*----------------ESTILOS DEL PLANETA TIERRA------------------------*/
+
+/*ESTE SOLO ES EL CONTENEDOR*/
+.cont-tierra{
+width:300px;
+height:300px;
+position: absolute;
+margin-left: 550px;
+margin-top: 200px;
+}
+
+.tierra{
+overflow: hidden;
+background-image: url("../img/tierra.jpg");/*AQUI ESTA LA IMAGEN*/
+width:270px;
+height:270px;
+border-radius: 50%;
+position: relative;
+
+animation-name: rotacionTierra; 
+animation-iteration-count:infinite;
+animation-duration:20s;
+animation-timing-function: linear;
+
+
+
+/*ESTAS SON LAS SOMBRAS DEL PLANETA*/
+box-shadow: -30px -15px 25px  rgba(0, 0, 0, 0.750) inset,
+            -60px -15px 20px rgba(0, 0, 0, 0.740) inset,
+            -40px -40px 15px rgb(255, 255, 255, .2) inset;
+}
+
+.tierra:hover{
+cursor: pointer;
+}
+
+/*LAS ANIMACIONES DEL PLANETA TIERRA*/
+@keyframes rotacionTierra {
+
+    0%{background-position:-15px}
+    25%{background-position:300px;}
+    50%{background-position:600px}
+    75%{background-position:900px}
+    100%{background-position:1210px}
+    
+}
+
+
+/*ESTILOS DE LOS SATELITES*/
+
+.cont-iss{
+width: 50px;
+height: 50px;
+position: absolute;
+overflow: hidden;
+top: 300px;
+margin-left:475px;
+transform:rotate(25deg);
+
+animation-name: isstraslacion;
+animation-duration:7s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+
+}
+
+.ISS img{
+ width:35px;
+ height:35px;
+}
+
+@keyframes isstraslacion{
+
+0%{margin-left:480px;}
+
+25%{margin-left:680px;}
+50%{margin-left:840px;}
+75%{margin-left:680px;}
+94%{z-index: -1;}
+100%{margin-left:480px;}
+
+}
+
+.cont-satelite{
+width: 50px;
+height: 50px;
+position: absolute;
+overflow: hidden;
+margin-left:475px;
+transform:rotate(25deg);
+margin-top:360px;
+margin-left:600px;
+
+animation-name: sateliteTraslacion;
+animation-duration:15s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+
+}
+
+.satelite img{
+    width:35px;
+    height:35px;
+    margin-left: 6px;
+    margin-top: 7px;
+}
+
+@keyframes sateliteTraslacion{
+
+    0%{margin-left:480px;
+       transform: rotate(25deg);
+      }
+
+    25%{margin-left:680px;
+        transform: rotate(91.25deg);
+       }
+    50%{margin-left:840px;
+        transform: rotate(182.5deg);
+       }
+    75%{margin-left:680px;
+        transform: rotate(273.75deg);
+       }
+
+    94%{z-index: -1;}
+    100%{margin-left:480px;
+        transform: rotate(390deg);
+        }    
+    
+    
+}
+
+
+.cont-hubble{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    overflow: hidden;
+    margin-left:475px;
+    transform:rotate(200deg);
+    margin-top:220px;
+    margin-left:850px;
+    display: none;
+    animation-name: hubbleTraslacion;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+.hubble img {
+ 
+    width:35px;
+    height:35px;
+    margin-left: 6px;
+    margin-top: 7px;
+
+}
+
+@keyframes hubbleTraslacion{
+
+    0%{margin-left:480px;}
+
+    25%{margin-left:680px;}
+    50%{margin-left:840px;}
+    75%{margin-left:680px;}
+    94%{z-index: -1;}
+    100%{margin-left:480px;}    
+    
+    
+}
+
+
+
+
